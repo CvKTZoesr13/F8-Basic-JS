@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Window Object</h1>
+    <h2>The localStorage Property</h2>
+
+    <p>Saved name is:</p>
+    <p id="demo"></p>
+    <button onclick="myFunction()">Click to delete!</button>
+    <button onclick="myFunction2()">Click to create!</button>
+
+    <script>
+      // Set Item
+      localStorage.setItem("lastname", "Smith");
+      // Retrieve
+      document.getElementById("demo").innerHTML =
+        localStorage.getItem("lastname");
+      myFunction = function () {
+        localStorage.clear();
+        document.getElementById("demo").innerHTML = "";
+      };
+      myFunction2 = function () {
+        localStorage.setItem("lastname", "Smith");
+        document.getElementById("demo").innerHTML =
+        localStorage.getItem("lastname");
+      };
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>
